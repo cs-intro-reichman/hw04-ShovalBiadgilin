@@ -6,15 +6,14 @@ public class ArrayOps {
    
 
  public static int findMissingInt (int [] array) {
-        int[] arr=new int[]{3,0,1};
-        int[] myArr=new int [arr.length+1];
+        int[] myArr=new int [array.length+1];
         int arrSum=0;
         int myArrSum=0;
         for(int i=0;i<myArr.length;i++){
             myArr[i]=i;
             myArrSum=myArrSum+i;
         }
-        for(int j=0;j<arr.length;j++){
+        for(int j=0;j<array.length;j++){
             arrSum=arrSum+arr[j];
         }
         int theMissingInt=myArrSum-arrSum;
