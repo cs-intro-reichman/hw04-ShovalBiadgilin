@@ -23,49 +23,45 @@ public class ArrayOps {
     }
 
     
-    public static int secondMaxValue(int [] array) {
-     int [] newArr= new int [array.length-1];
-     int max=array[0];
-     int count=0;
-
-        for (int i=1; i<array.length; i++){
-            if (array[i]==array[0]){
-                max=array[i];
-            } else { 
+    public static int secondMaxValue(int[] array) {
+        int[] newArr = new int[array.length - 1];
+        int max = array[0];
+        int count = 0;
+    
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] == array[0]) {
+                max = array[i];
+            } else {
                 break;
             }
         }
-        if(max==array[array.length-1]) { 
+        if (max == array[array.length - 1]) {
             return array[0];
-        }else (for (int i=1; i<array.length;i++){ 
-               if (max<array[i]){
-             newArr[count]=max;
-             max=array[i];
-             count++;
-             
-         }else{
-             if(array[i]!=max){
-              newArr[count]=array[i];
-              count++;
-             }
-         }
-     }
-     int secondMax=newArr[0];
-         for( int j=1; j<newArr.length;j++){ 
-             if (secondMax<newArr[j]){ 
-                 secondMax=newArr[j];
-             }
-         }
-         
-   
-         return secondMax;
-        
-    }
-     
-     
+        } else {
+            for (int i = 1; i < array.length; i++) {
+                if (max < array[i]) {
+                    newArr[count] = max;
+                    max = array[i];
+                    count++;
+                } else {
+                    if (array[i] != max) {
+                        newArr[count] = array[i];
+                        count++;
+                    }
+                }
+            }
+            int secondMax = newArr[0];
+            for (int j = 1; j < newArr.length; j++) {
+                if (secondMax < newArr[j]) {
+                    secondMax = newArr[j];
+                }
+            }
     
-
-
+            return secondMax;
+        }
+    }
+    
+     
      public static boolean containsTheSameElements(int [] array1,int [] array2) {
         int j=0; 
         int i=0;
@@ -95,6 +91,7 @@ public class ArrayOps {
             return true;
         }else{ 
             return false;
+        }
 
         } 
 
