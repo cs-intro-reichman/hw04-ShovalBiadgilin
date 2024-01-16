@@ -26,12 +26,9 @@ public class StringOps {
     }
 
    
-    public static String capVowelsLowRest (String string) {
+     public static String capVowelsLowRest (String string) {
         String newStr="";
         for (int i=0; i<string.length(); i++){
-            if (string.charAt(i)==' '){
-                newStr=newStr+string.charAt(i);
-            }
             if (string.charAt(i)=='a'||string.charAt(i)=='e'||string.charAt(i)=='i'||string.charAt(i)=='o'||string.charAt(i)=='u'){
                 if(string.charAt(i)>=97 && string.charAt(i)<=122){
                     newStr=newStr+(char)(string.charAt(i)-32);
