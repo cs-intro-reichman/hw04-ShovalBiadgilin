@@ -7,14 +7,14 @@ public class ArrayOps {
 
  public static int findMissingInt (int [] array) {
         int[] myArr=new int [array.length+1];
-        int arrSum=0;
+        int arraySum=0;
         int myArrSum=0;
         for(int i=0;i<myArr.length;i++){
             myArr[i]=i;
             myArrSum=myArrSum+i;
         }
         for(int j=0;j<array.length;j++){
-            arrSum=arrSum+arr[j];
+            arrSum=arrSum+array[j];
         }
         int theMissingInt=myArrSum-arrSum;
         return theMissingInt;
