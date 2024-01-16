@@ -18,7 +18,6 @@ public class ArrayOps {
             arrSum=arrSum+arr[j];
         }
         int theMissingInt=myArrSum-arrSum;
-        System.out.println(theMissingInt);
         return theMissingInt;
     }
 
