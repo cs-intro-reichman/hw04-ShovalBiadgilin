@@ -37,7 +37,7 @@ public class ArrayOps {
             return array[0];
         } else {
             for (int i = 1; i < array.length; i++) {
-                if (max < array[i]) {
+                if (max <= array[i]) {
                     newArr[count] = max;
                     max = array[i];
                     count++;
