@@ -21,22 +21,13 @@ public class StringOps {
     //////        in Recitation 3 question 5             ///////
     //////                                               ///////
     ////////////////////////////////////////////////////////////
-    public static void main(String[] args) {
-        
-    }
-
-   
-     public static String capVowelsLowRest (String string) {
+    public static String capVowelsLowRest (String string) {
         String newStr="";
         for (int i=0; i<string.length(); i++){
             if (string.charAt(i)=='a'||string.charAt(i)=='e'||string.charAt(i)=='i'||string.charAt(i)=='o'||string.charAt(i)=='u'){
-                if(string.charAt(i)>=97 && string.charAt(i)<=122){
                     newStr=newStr+(char)(string.charAt(i)-32);
-                }else{
-                    newStr=newStr+string.charAt(i);
-                }
             }else{
-                if (string.charAt(i)>=65 && string.charAt(i)<=90){
+                if ((string.charAt(i)>=65 && string.charAt(i)<=90) && (string.charAt(i)!='A'&& string.charAt(i)!='E'&& string.charAt(i)!='I'&& string.charAt(i)!='O'&& string.charAt(i)!='U') ){
                     newStr=newStr+(char)(string.charAt(i)+32);
                 }else{
                     newStr=newStr+string.charAt(i);
